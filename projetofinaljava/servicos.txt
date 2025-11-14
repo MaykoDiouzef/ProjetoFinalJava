@@ -1,100 +1,105 @@
-1	www	22.0	1
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
-null	null	null	null
+========== Ordem de serviço ==========
+
+Código		Serviço		Preço		Código da Peça		Nome da Peça
+1		Troca de pneu		54.6		1		pneu		
+2		Realizada a troca de roda		65.63		2		roda		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------

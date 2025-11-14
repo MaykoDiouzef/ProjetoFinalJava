@@ -14,7 +14,7 @@ public class Peca {
     static String[][] listaPecas = new String[100][2];
 
     /**
-     * Este metodo responsável por cadastrar uma nova peça na matriz listaPecas.
+     * Este metodo é responsável por cadastrar uma nova peça na matriz listaPecas.
      */
     public static void Cadastrar() {
 
@@ -34,10 +34,11 @@ public class Peca {
     }
 
     /**
-     * Este metodo responsável por listar a matriz listaPecas.
+     * Este metodo é responsável por listar a matriz listaPecas.
      */
     public static void Listar() {
         
+        System.out.println("--------------------------------------");
         System.out.println("Codigo\t\tPeca");
 
         for (int linha = 0; linha < listaPecas.length; linha++) {

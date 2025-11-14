@@ -9,7 +9,7 @@ import java.util.Scanner;
 /**
  * Classe responsável por gerenciar matriz lista de serviços.
  *
- * @author Mayko Amaral
+ * @author Mayko Amaral & Elyas Augusto
  */
 public class Servico {
 
@@ -17,10 +17,11 @@ public class Servico {
     static String descricao;
     static double valor = 0;
     static int codigoPeca = 0;
-    static String[][] listaServicos = new String[100][4];
+    static String[][] listaServicos = new String[100][5];
 
     /**
-     * Este metodo responsável por cadastrar um novo serviço na matriz de listaServicos.
+     * Este metodo é responsável por cadastrar um novo serviço na matriz de
+     * listaServicos.
      */
     public static void Cadastrar() {
 
@@ -35,6 +36,7 @@ public class Servico {
             Scanner lsValor = new Scanner(System.in);
             valor = lsValor.nextDouble();
 
+            System.out.println("--------------------------------------");
             System.out.println("===== Lista de pecas disponiveis =====");
             Peca.Listar();
             System.out.print("=> Codigo da peca do servico: ");
@@ -45,6 +47,7 @@ public class Servico {
             listaServicos[codigo][1] = descricao;
             listaServicos[codigo][2] = Double.toString(valor);
             listaServicos[codigo][3] = Integer.toString(codigoPeca);
+            listaServicos[codigo][4] = Peca.listaPecas[codigoPeca - 1][1];
 
             codigo++;
 
@@ -55,43 +58,51 @@ public class Servico {
             System.out.println("--------------------------------------");
             System.out.println("Antes de cadastrar um serviço, eh necessario cadastrar uma peca primeiro.");
         }
-        
+
     }
-        public static void Imprimir() {
-            
+
+    /**
+     * Este metodo é responsável por imprimir o serviço na matriz de
+     * listaServicos.
+     */
+    public static void Imprimir() {
+
         String conteudo = "";
         String nomeArquivo = "servicos.txt";
-;
 
-        System.out.println("Código\t\tServiço\t\tPreço");
-        
+        conteudo = "========== Ordem de serviço ==========\n\n"
+                + "Código\t\tServiço\t\tPreço\t\tCódigo da Peça\t\tNome da Peça\n";
+
+        System.out.println("--------------------------------------");
+        System.out.println("========== Ordem de serviço ==========");
+        System.out.println("Código\t\tServiço\t\tPreço\t\tCódigo da Peça\t\tNome da Peça");
+
         for (int linha = 0; linha < listaServicos.length; linha++) {
 
             if (listaServicos[linha][0] != null) {
                 for (int coluna = 0; coluna < listaServicos[linha].length; coluna++) {
-                    
+
                     System.out.print(listaServicos[linha][coluna] + "\t\t");
+                    conteudo += listaServicos[linha][coluna] + "\t\t";
                 }
-                
 
                 System.out.println("");
                 System.out.println("--------------------------------------");
+
             }
-            
-            conteudo += listaServicos[linha][0] + "\t"
-                      + listaServicos[linha][1] + "\t"
-                      + listaServicos[linha][2] + "\t"
-                      + listaServicos[linha][3] + "\n";
+            conteudo += "\n";
 
         }
-        File arquivo = new File("servicos.txt") ;
+
+        conteudo += "\n--------------------------------------";
+
+        File arquivo = new File("servicos.txt");
 
         try {
             if (arquivo.createNewFile()) {
                 System.out.println("Arquivo criado com sucesso: " + arquivo.getName());
             }
 
-           
             try (PrintWriter writer = new PrintWriter(new FileWriter(arquivo, false))) {
                 writer.print(conteudo);
                 System.out.println("--> Conteudo escrito com sucesso no arquivo");
@@ -100,7 +111,6 @@ public class Servico {
         } catch (IOException e) {
             System.err.println("Erro ao escrever o arquivo" + nomeArquivo);
         }
-
 
     }
 }
