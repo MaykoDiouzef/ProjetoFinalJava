@@ -1,5 +1,9 @@
 package projetofinaljava;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 /**
@@ -51,5 +55,52 @@ public class Servico {
             System.out.println("--------------------------------------");
             System.out.println("Antes de cadastrar um serviço, eh necessario cadastrar uma peca primeiro.");
         }
+        
+    }
+        public static void Imprimir() {
+            
+        String conteudo = "";
+        String nomeArquivo = "servicos.txt";
+;
+
+        System.out.println("Código\t\tServiço\t\tPreço");
+        
+        for (int linha = 0; linha < listaServicos.length; linha++) {
+
+            if (listaServicos[linha][0] != null) {
+                for (int coluna = 0; coluna < listaServicos[linha].length; coluna++) {
+                    
+                    System.out.print(listaServicos[linha][coluna] + "\t\t");
+                }
+                
+
+                System.out.println("");
+                System.out.println("--------------------------------------");
+            }
+            
+            conteudo += listaServicos[linha][0] + "\t"
+                      + listaServicos[linha][1] + "\t"
+                      + listaServicos[linha][2] + "\t"
+                      + listaServicos[linha][3] + "\n";
+
+        }
+        File arquivo = new File("servicos.txt") ;
+
+        try {
+            if (arquivo.createNewFile()) {
+                System.out.println("Arquivo criado com sucesso: " + arquivo.getName());
+            }
+
+           
+            try (PrintWriter writer = new PrintWriter(new FileWriter(arquivo, false))) {
+                writer.print(conteudo);
+                System.out.println("--> Conteudo escrito com sucesso no arquivo");
+            }
+
+        } catch (IOException e) {
+            System.err.println("Erro ao escrever o arquivo" + nomeArquivo);
+        }
+
+
     }
 }

@@ -28,9 +28,9 @@ public class Main {
                 case 2:
                     Servico.Cadastrar();
                     break;
-               // case 3:
-                  //  Servico.Imprimir();
-                  //  break;
+                case 3:
+                    Servico.Imprimir();
+                    break;
             }
 
         } while (opcao != 4);
